@@ -37,10 +37,17 @@ class _YFHomeContentState extends State<YFHomeContent> {
   }
 }
 
-class StackDemo2 extends StatelessWidget {
+class StackDemo2 extends StatefulWidget {
   const StackDemo2({
     Key key,
   }) : super(key: key);
+
+  @override
+  _StackDemo2State createState() => _StackDemo2State();
+}
+
+class _StackDemo2State extends State<StackDemo2> {
+  bool _isFavor = true;
 
   @override
   Widget build(BuildContext context) {
@@ -63,8 +70,12 @@ class StackDemo2 extends StatelessWidget {
                 ),
                 IconButton(
                   icon: Icon(Icons.favorite),
-                  color: Colors.white,
-                  onPressed: () => print('dd'),
+                  color: _isFavor?Colors.red:Colors.white,
+                  onPressed: () {
+                    setState(() {
+                      _isFavor = !_isFavor;
+                    });
+                  },
                 )
               ],
             ),
