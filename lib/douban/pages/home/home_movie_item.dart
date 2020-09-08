@@ -121,24 +121,26 @@ class YFHomeMovieItem extends StatelessWidget {
   }
 
   Widget buildContentInforRate() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        YFStarRating(
-          rating: movie.rating.average,
-          count: 5,
-          selectedColor: Colors.yellow,
-          size: 20,
-        ),
-        SizedBox(
-          width: 6,
-        ),
-        Text(
-          '${movie.rating.average}',
-          style: TextStyle(fontSize: 16),
-        ),
-      ],
+    return FittedBox(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          YFStarRating(
+            rating: movie.rating.average,
+            count: 5,
+            selectedColor: Colors.yellow,
+            size: 20,
+          ),
+          SizedBox(
+            width: 6,
+          ),
+          Text(
+            '${movie.rating.average}',
+            style: TextStyle(fontSize: 16),
+          ),
+        ],
+      ),
     );
   }
 

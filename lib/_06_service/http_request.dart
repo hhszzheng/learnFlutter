@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:learn_flutter/service/config.dart';
+import 'package:learn_flutter/_06_service//config.dart';
 class HttpRequest{
 
   static final BaseOptions baseOptions = BaseOptions(

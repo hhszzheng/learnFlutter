@@ -2,7 +2,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/day09/viewmodel/counter_view_model.dart';
+import 'package:learn_flutter/_09_state_manager/viewmodel/counter_view_model.dart';
 import 'package:learn_flutter/douban/model/home_model.dart';
 import 'package:provider/provider.dart';
 
